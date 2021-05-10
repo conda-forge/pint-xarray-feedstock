@@ -1,5 +1,5 @@
 {% set name = "pint-xarray" %}
-{% set version = "0.1" %}
+{% set version = "0.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a48be363f2cd870c0c73e11b9e2b04160c1cfb089fee98277189a3afc26ecc45
+  sha256: 9908ae6e34969a4f76277db0c754076300825ee52d0f51b46a7ae5bd87e81e3a
 
 build:
   number: 0
