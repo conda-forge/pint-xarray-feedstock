@@ -21,9 +21,7 @@ requirements:
     - python >=3.6
     - setuptools >=42
     - setuptools_scm >=3.4
-    - toml
   run:
-    - importlib-metadata
     - numpy >=1.17
     - pint >=0.16
     - python >=3.6
