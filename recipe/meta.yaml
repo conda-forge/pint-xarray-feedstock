@@ -1,5 +1,5 @@
 {% set name = "pint-xarray" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3" %}
 
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1ee6bf74ee7b52b946f226a96469276fa4f5c68f7381c1b2aae66852562cb275
+  sha256: 3545dfa78bee3f98eba29b8bd17500e3b5cb7c7b03a2c2781c4d4d59b6a82841
 
 build:
   number: 0
   noarch: python
-  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -21,12 +21,10 @@ requirements:
     - python >=3.6
     - setuptools >=42
     - setuptools_scm >=3.4
-    - toml
   run:
-    - importlib-metadata
     - numpy >=1.17
     - pint >=0.16
-    - python >=3.6
+    - python >=3.8
     - xarray >=0.16.1
 
 test:
@@ -38,6 +36,7 @@ test:
     - python -c 'from pint_xarray import __version__; assert __version__ != "0.0.0"'
   requires:
     - pip
+    - pytest
 
 about:
   home: https://github.com/xarray-contrib/pint-xarray
