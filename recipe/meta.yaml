@@ -1,5 +1,6 @@
 {% set name = "pint-xarray" %}
-{% set version = "0.4" %}
+{% set version = "0.5.0" %}
+{% set python_min = "3.10" %}
 
 
 package:
@@ -8,19 +9,19 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: b6b737a9c46dfb14a8598c27a71100496994c9d79dab61fd77f0d2685ae7065e
+  sha256: f3c6deb290a8e10daec610ae6587cf29fd9051f9017d3f3745a3f4d10146de4f
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools >=42
-    - setuptools_scm >=3.4
+    - setuptools >=64
+    - setuptools_scm >=7.0
   run:
     - numpy >=1.17
     - pint >=0.16
