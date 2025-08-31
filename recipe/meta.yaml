@@ -1,6 +1,6 @@
 {% set name = "pint-xarray" %}
 {% set version = "0.6.0" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 
 
 package:
@@ -20,13 +20,13 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools >=64
-    - setuptools_scm >=7.0
+    - setuptools >=77
+    - setuptools_scm >=8
   run:
-    - numpy >=1.17
-    - pint >=0.16
+    - numpy >=1.26
+    - pint >=0.24
     - python >={{ python_min }}
-    - xarray >=0.16.1
+    - xarray >=2023.07.0
 
 test:
   imports:
