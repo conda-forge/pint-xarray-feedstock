@@ -1,5 +1,5 @@
 {% set name = "pint-xarray" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 {% set python_min = "3.10" %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 708670b84cb2583aea602c7d1a56c976322f2a5c53a1043f99f2dc68b2f2fd27
+  sha256: 20955ebd3fa5161608eeb9f39268b4ff22e87f8619c652fea0a2822f11774ad7
 
 build:
   number: 0
